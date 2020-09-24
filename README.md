@@ -8,7 +8,7 @@
 	
 	You must have backend in order to run the frontend.
 
-- To run this from end part,
+- To run this frontend part,
 
 	you can run:
 	`npm start`
