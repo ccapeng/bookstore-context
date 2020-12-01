@@ -1,46 +1,8 @@
 import Request from "./request";
 
-// export const getBooks = () => {
-
-//   let url = "api/book/";
-//   return Request.get(url);
-
-// }
-
-// export const getBook = (bookId) => {
-
-//   let url = `api/book/${bookId}/`;
-//   return Request.get(url);
-
-// }
-
-// export const saveBook = (book) => {
-
-//   if (book.id === 0) {
-//     const body = JSON.stringify(book);
-//     let url = "api/book/";
-//     return Request.create(url, body);
-
-//   } else {
-
-//     const body = JSON.stringify(book);
-//     let url = `api/book/${book.id}/`;
-//     return Request.update(url, body);
-
-//   }
-
-// }
-
-// export const deleteBook = (bookId) => {
-
-//   let url = `api/book/${bookId}/`;
-//   return Request.delete(url);
-
-// }
-
 const BookService = {
   list: () => {
-    let url = "api/book/get_all/";
+    let url = "api/book/";
     return Request.get(url);
   },
   get: (bookId) => {

@@ -88,6 +88,15 @@ export const BookProvider = ({ children }) => {
 
   }
 
+  const initBook = () => {
+    try {
+      dispatch(creator.initBook());
+    } catch (error) {
+      console.log(error);
+    }
+
+  }
+
   const saveBook = (book) => {
     const _save = async () => {
       console.log("_save", book);
@@ -132,6 +141,7 @@ export const BookProvider = ({ children }) => {
     book: state.book,
     status: state.status,
     getBook,
+    initBook,
     saveBook,
     syncBookValue,
     deleteBook

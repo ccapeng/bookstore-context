@@ -11,6 +11,7 @@ const Book = props => {
   const {
     status,
     book,
+    initBook,
     getBook,
     saveBook,
     syncBookValue
@@ -19,12 +20,13 @@ const Book = props => {
   const { publishers } = useContext(PublisherContext);
   const { authors } = useContext(AuthorContext);
   const { setTab } = useContext(TabContext);
-  console.log("authors", authors)
   useEffect(() => {
     const _fetch = async () => {
       let bookId = props.match.params.id;
       if (typeof (bookId) !== "undefined") {
         getBook(bookId);
+      } else {
+        initBook();
       }
     }
     setTab("book");
